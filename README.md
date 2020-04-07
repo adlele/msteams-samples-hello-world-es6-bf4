@@ -1,16 +1,12 @@
 
 ---
-page_type: sample
-products:
-- office-365
-languages:
-- javascript
-title: Microsoft Teams NodeJS Helloworld Sample
-description: Microsoft Teams hello world sample app in Node.js
-extensions:
-  contentType: samples
-  createdDate: 04/07/2020 12:12:12 PM
----
+
+| page_type | products | languages | title | description | extensions contentType | extensions createdDate |
+| --------- | -------- | --------- | ----- | ----------- | ---------------------- | ---------------------- |
+| sample | office-365 | javascript | Microsoft Teams NodeJS Helloworld Sample | Microsoft Teams hello world sample app in node.js ES6 with Bot Framework v4 and HMR | samples | 11/3/2017 12:53:17 PM |
+
+
+
 # Official documentation
 
 More information for this sample - and for how to get started with Microsoft Teams development in general - is found in [Get started on the Microsoft Teams platform with Node.js and App Studio](https://docs.microsoft.com/en-us/microsoftteams/platform/get-started/get-started-nodejs-app-studio).
