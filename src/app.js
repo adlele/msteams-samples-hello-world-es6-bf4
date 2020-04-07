@@ -16,7 +16,20 @@ require('dotenv').config({ path: ENV_FILE });
 
 
 //Create HTTP server.
-const server = restify.createServer();
+const server = restify.createServer(
+    {
+      formatters: {
+        'text/html': function (req, res, body) {
+          return  body
+      }
+    }
+  })
+
+  server.get('/*', restify.plugins.serveStatic({
+    directory: __dirname + '/static',
+}));
+
+
 server.listen(process.env.port || process.env.PORT || 3333, function () {
     console.log(`\n${server.name} listening to ${server.url}`);
 });

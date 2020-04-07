@@ -1,28 +1,47 @@
 
 
+import fs from 'fs'
+
+
 export default function tabs(server) {
 
+    var staticBasePath = 'src/views/';
     // Setup home page
     server.get('/', (req, res, next) => {
-        res.send('hello');
+        fs.readFile(staticBasePath + 'hello.html', 'utf8', function(err, data) {
+            if (err) throw err;
+            res.send(data);
+        });
     });
 
     // Setup the static tab
     server.get('/hello', (req, res, next) => {
-        res.send('hello');
+        fs.readFile(staticBasePath + 'hello.html', 'utf8', function(err, data) {
+            if (err) throw err;
+            res.send(data);
+        });
     });
 
     // Setup the configure tab, with first and second as content tabs
     server.get('/configure', (req, res, next) => {
-        res.send('configure');
+        fs.readFile(staticBasePath + 'configure.html', 'utf8', function(err, data) {
+            if (err) throw err;
+            res.send(data);
+        });
     });
 
     server.get('/first', (req, res, next) => {
-        res.send('first');
+        fs.readFile(staticBasePath + 'first.html', 'utf8', function(err, data) {
+            if (err) throw err;
+            res.send(data);
+        });
     });
 
     server.get('/second', (req, res, next) => {
-        res.send('second');
+        fs.readFile(staticBasePath + 'second.html', 'utf8', function(err, data) {
+            if (err) throw err;
+            res.send(data);
+        });
     });
 }
 
